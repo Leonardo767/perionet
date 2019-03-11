@@ -1,0 +1,10 @@
+{% extends "layout.html" %} {% block navbar %}
+<li><a href="{{ url_for('home') }}">Home</a></li>
+<li class="active"><a href="{{ url_for('chart') }}">Chart</a></li>
+{% endblock %} {% block content %}
+<h1>Hello!</h1>
+<p class="lead">
+  This is the chart page.<br />
+  Use this as a placeholder.
+</p>
+{% endblock content %}

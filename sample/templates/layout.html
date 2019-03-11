@@ -15,7 +15,7 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="..//static/assets/favicon.ico"
+      href="../static/assets/favicon.ico"
     />
     <title>Perionet</title>
 
@@ -61,13 +61,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Perionet</a>
+          <a class="navbar-brand" href="{{ url_for('home') }}">Perionet</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            {% block navbar %} {% endblock %}
           </ul>
         </div>
         <!--/.nav-collapse -->
@@ -83,11 +81,6 @@
         </div>
         {% endfor %} {% endif %} {% endwith %} {% block content %} {% endblock
         %}
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">
-          Use this document as a way to quickly start any new project.<br />
-          All you get is this text and a mostly barebones HTML document.
-        </p>
       </div>
     </div>
     <!-- /.container -->
