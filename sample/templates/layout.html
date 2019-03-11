@@ -12,9 +12,12 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="icon" href="https://getbootstrap.com/docs/3.3/favicon.ico" />
-
-    <title>Starter Template for Bootstrap</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="..//static/assets/favicon.ico"
+    />
+    <title>Perionet</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../static/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -26,10 +29,7 @@
     />
 
     <!-- Custom styles for this template -->
-    <link
-      href="../static/examples/starter-template/starter-template.css"
-      rel="stylesheet"
-    />
+    <link href="../static/examples/main.css" rel="stylesheet" />
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9
@@ -61,7 +61,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Perionet</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -76,6 +76,13 @@
 
     <div class="container">
       <div class="starter-template">
+        {% with messages = get_flashed_messages(with_categories=true) %} {% if
+        messages %} {% for category, message in messages %}
+        <div class="alert alert-{{ category }}">
+          {{ message }}
+        </div>
+        {% endfor %} {% endif %} {% endwith %} {% block content %} {% endblock
+        %}
         <h1>Bootstrap starter template</h1>
         <p class="lead">
           Use this document as a way to quickly start any new project.<br />
@@ -84,7 +91,14 @@
       </div>
     </div>
     <!-- /.container -->
-
+    <!-- Footer -->
+    <footer class="bg-light py-5">
+      <div class="container">
+        <div class="small text-center text-muted">
+          Copyright &copy; 2019 - Leonardo Pinero-Perez
+        </div>
+      </div>
+    </footer>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
