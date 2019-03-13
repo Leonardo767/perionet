@@ -12,4 +12,15 @@ def home():
 
 @app.route("/chart")
 def chart():
-    return render_template('chart.html')
+    tooth_group = [0]*4
+    return render_template('chart.html', teeth=tooth_group)
+
+
+@app.route("/patient_profile")
+def patient_profile():
+    return render_template('patient_profile.html')
+
+
+@app.route("/register_patient")
+def register_patient():
+    return render_template('register_patient.html')

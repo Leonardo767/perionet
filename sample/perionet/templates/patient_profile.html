@@ -1,14 +1,14 @@
 {% extends "layout.html" %} {% block navbar %}
-<li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+<li><a href="{{ url_for('home') }}">Home</a></li>
 <li><a href="{{ url_for('chart') }}">Chart</a></li>
-<li><a href="{{ url_for('patient_profile') }}">Patient</a></li>
+<li class="active"><a href="{{ url_for('patient_profile') }}">Patient</a></li>
 {% endblock %} {% block content %}
-<h1>Home Page</h1>
+<h1>Patient Profile</h1>
 <p class="lead">
-  This is the home page.<br />
+  This is the Patient page.<br />
   Use this as a placeholder.
 </p>
 <div class="container">
-  <p>Hello, please login below.</p>
+  <p>**PATIENT INFO**</p>
 </div>
 {% endblock content %}

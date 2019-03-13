@@ -1,10 +1,59 @@
 {% extends "layout.html" %} {% block navbar %}
 <li><a href="{{ url_for('home') }}">Home</a></li>
 <li class="active"><a href="{{ url_for('chart') }}">Chart</a></li>
+<li><a href="{{ url_for('patient_profile') }}">Patient</a></li>
 {% endblock %} {% block content %}
-<h1>Hello!</h1>
+<h1>Chart Page</h1>
 <p class="lead">
   This is the chart page.<br />
   Use this as a placeholder.
 </p>
+
+<!-- Upper Row -->
+<div class="row">
+  <div
+    class="col-sm-2"
+    style="height: 300px; padding: 0px; border-style: dashed; border-color: black; border-width: 1px"
+  >
+    <div
+      class="col-sm-4"
+      style="height: 250px; border-style: solid; border-color: black; border-width: 3px"
+    ></div>
+    <div
+      class="col-sm-4"
+      style="height: 250px; border-style: solid; border-color: black; border-width: 3px"
+    ></div>
+    <div
+      class="col-sm-4"
+      style="height: 250px; border-style: solid; border-color: black; border-width: 3px"
+    ></div>
+  </div>
+  <div class="col-sm-2" style="background: blue; height: 300px; padding: 0px">
+    <div class="col-sm-4" style="background: green; height: 250px;"></div>
+    <div class="col-sm-4" style="background: red; height: 250px;"></div>
+    <div class="col-sm-4" style="background: purple; height: 250px;"></div>
+  </div>
+  <div class="col-sm-2" style="background: blue; height: 300px; padding: 0px">
+    <div class="col-sm-4" style="background: green; height: 250px;"></div>
+    <div class="col-sm-4" style="background: red; height: 250px;"></div>
+    <div class="col-sm-4" style="background: purple; height: 250px;"></div>
+  </div>
+  <div class="col-sm-2" style="background: blue; height: 300px; padding: 0px">
+    <div class="col-sm-4" style="background: green; height: 250px;"></div>
+    <div class="col-sm-4" style="background: red; height: 250px;"></div>
+    <div class="col-sm-4" style="background: purple; height: 250px;"></div>
+  </div>
+  <div class="col-sm-2" style="background: blue; height: 300px; padding: 0px">
+    <div class="col-sm-4" style="background: green; height: 250px;"></div>
+    <div class="col-sm-4" style="background: red; height: 250px;"></div>
+    <div class="col-sm-4" style="background: purple; height: 250px;"></div>
+  </div>
+  <div class="col-sm-2" style="background: blue; height: 300px; padding: 0px">
+    <div class="col-sm-4" style="background: green; height: 250px;"></div>
+    <div class="col-sm-4" style="background: red; height: 250px;"></div>
+    <div class="col-sm-4" style="background: purple; height: 250px;"></div>
+  </div>
+</div>
+<!-- Lower Row (copy the top)-->
+
 {% endblock content %}
