@@ -1,7 +1,5 @@
-from flask import Flask, render_template, url_for, flash, redirect
-app = Flask(__name__)
-
-app.config['SECRET_KEY'] = '38d8626329795e446589fb7e670f6797'
+from flask import render_template, url_for, flash, redirect
+from perionet import app
 
 
 @app.route("/")
@@ -15,7 +13,3 @@ def home():
 @app.route("/chart")
 def chart():
     return render_template('chart.html')
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
