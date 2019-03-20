@@ -1,7 +1,9 @@
 from flask import render_template, url_for, flash, redirect
 from perionet import app
+from perionet.chartHandle import Patient
 
-dummyChartData = [['0 0 0', '1 2 1']]*32
+
+patient_name = 'John Doe'
 
 
 @app.route("/")
@@ -14,7 +16,8 @@ def home():
 
 @app.route("/chart")
 def chart():
-    return render_template('chart.html', data=dummyChartData)
+    currentPatient = Patient(patient_name)
+    return render_template('chart.html', currentPatient=currentPatient)
 
 
 @app.route("/patient_profile")

@@ -16,13 +16,21 @@
   >
     <strong>{{ i }}</strong>
     <div class="row">
-      {{ data[i - 1][0] }}
+      {% if not i in currentPatient.missing %}
+      {{ currentPatient.measurements[i - 1][0] }}
+      {% else %} * * * {% endif %}
     </div>
     <div>
+      {% if not i in currentPatient.missing %}
       <img src="../static/assets/img/{{ i }}-small.jpg" />
+      {% else %}
+      <img src="../static/assets/img/missing-small.jpg" />
+      {% endif %}
     </div>
     <div class="row">
-      {{ data[i - 1][1] }}
+      {% if not i in currentPatient.missing %}
+      {{ currentPatient.measurements[i - 1][1] }}
+      {% else %} * * * {% endif %}
     </div>
   </div>
   {% endfor %}
@@ -36,13 +44,21 @@
     style="height: 370px; width: 80px; border-style: solid; border-color: black; border-width: 0px; padding-left: 5px; padding-right: 5px;"
   >
     <div class="row">
-      {{ data[i - 1][0] }}
+      {% if not i in currentPatient.missing %}
+      {{ currentPatient.measurements[i - 1][0] }}
+      {% else %} * * * {% endif %}
     </div>
     <div>
+      {% if not i in currentPatient.missing %}
       <img src="../static/assets/img/{{ i }}-small.jpg" />
+      {% else %}
+      <img src="../static/assets/img/missing-small.jpg" />
+      {% endif %}
     </div>
     <div class="row">
-      {{ data[i - 1][1] }}
+      {% if not i in currentPatient.missing %}
+      {{ currentPatient.measurements[i - 1][1] }}
+      {% else %} * * * {% endif %}
     </div>
     <strong>{{ i }}</strong>
   </div>
