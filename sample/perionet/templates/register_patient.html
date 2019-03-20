@@ -1,0 +1,13 @@
+{% extends "layout.html" %} {% block navbar %}
+<li><a href="{{ url_for('home') }}">Home</a></li>
+<li><a href="{{ url_for('chart') }}">Chart</a></li>
+<li class="active">
+  <a href="{{ url_for('patient_profile') }}">Patient (Registration)</a>
+</li>
+{% endblock %} {% block content %}
+<h1>Patient Registration</h1>
+<p class="lead">
+  This is the registration page.<br />
+  Use this as a placeholder.
+</p>
+{% endblock content %}
