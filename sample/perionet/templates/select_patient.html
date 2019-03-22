@@ -1,0 +1,7 @@
+{% extends "layout.html" %} {% block navbar %}
+<li><a href="{{ url_for('home') }}">Home</a></li>
+<li><a href="{{ url_for('chart') }}">Chart</a></li>
+<li class="active">
+  <a href="{{ url_for('patient_profile') }}">Patient (Selection)</a>
+</li>
+{% endblock %}

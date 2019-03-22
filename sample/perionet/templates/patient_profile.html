@@ -11,6 +11,13 @@
 <div class="container">
   <p>**PATIENT INFO**</p>
   <a
+    class="btn btn-primary"
+    href="{{ url_for('select_patient') }}"
+    role="button"
+  >
+    Select New Patient
+  </a>
+  <a
     class="btn btn-success"
     href="{{ url_for('register_patient') }}"
     role="button"

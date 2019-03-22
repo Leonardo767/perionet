@@ -5,9 +5,63 @@
   <a href="{{ url_for('patient_profile') }}">Patient (Registration)</a>
 </li>
 {% endblock %} {% block content %}
-<h1>Patient Registration</h1>
-<p class="lead">
-  This is the registration page.<br />
-  Use this as a placeholder.
-</p>
+<div class="content-section">
+  <form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group" style="padding: 0rem 30%;">
+      <legend class="border-bottom mb-4">Register New Patient</legend>
+      <div class="form-group">
+        {{ form.nameLast.label(class="form-control-label") }}
+
+        {% if form.nameLast.errors %}
+        {{ form.nameLast(class="form-control form-control-lg is-invalid") }}
+        <div class="invalid-feedback">
+          {% for error in form.nameLast.errors %}
+          <span style="color: red;">{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{ form.nameLast(class="form-control form-control-lg") }}
+        {% endif %}
+      </div>
+      <div class="form-group">
+        {{ form.nameFirst.label(class="form-control-label") }}
+
+        {% if form.nameFirst.errors %}
+        {{ form.nameFirst(class="form-control form-control-lg is-invalid") }}
+        <div class="invalid-feedback">
+          {% for error in form.nameFirst.errors %}
+          <span style="color: red;">{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{ form.nameFirst(class="form-control form-control-lg") }}
+        {% endif %}
+      </div>
+      <div class="form-group">
+        {{ form.nameDob.label(class="form-control-label") }}
+
+        {% if form.nameDob.errors %}
+        {{ form.nameDob(class="form-control form-control-lg is-invalid") }}
+        <div class="invalid-feedback">
+          {% for error in form.nameDob.errors %}
+          <span style="color: red;">{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{ form.nameDob(class="form-control form-control-lg") }}
+        {% endif %}
+      </div>
+    </fieldset>
+    <div class="form-group">
+      {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+  </form>
+</div>
+<div class="border-top pt-3">
+  <small class="text-muted">
+    Patient already registered?
+    <a class="ml-2" href="{{ url_for('patient_profile') }}"> Select Patient</a>
+  </small>
+</div>
 {% endblock content %}
