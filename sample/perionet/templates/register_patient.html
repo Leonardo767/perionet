@@ -58,10 +58,21 @@
     </div>
   </form>
 </div>
+<div class="container" style="margin-bottom: 10px;">
+  <a
+    class="btn btn-danger"
+    href="{{ url_for('patient_profile') }}"
+    role="button"
+  >
+    Return to Current Profile
+  </a>
+</div>
 <div class="border-top pt-3">
   <small class="text-muted">
     Patient already registered?
-    <a class="ml-2" href="{{ url_for('patient_profile') }}"> Select Patient</a>
+    <a class="ml-2" href="{{ url_for('select_patient') }}">
+      Select Existing Patient</a
+    >
   </small>
 </div>
 {% endblock content %}
