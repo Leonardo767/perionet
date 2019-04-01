@@ -2,6 +2,7 @@ from perionet import db
 
 
 class Patient(db.Model):
+    __tablename__ = 'Patients'
     id = db.Column(db.Integer, primary_key=True)
     nameLast = db.Column(db.String(30), nullable=False)
     nameFirst = db.Column(db.String(30), nullable=False)
