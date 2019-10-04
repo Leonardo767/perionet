@@ -3,5 +3,9 @@
   "python.autoComplete.extraPaths": [
     "C:\\Users\\Leonardo\\Documents\\Environments\\perionet\\Lib\\site-packages"
   ],
-  "python.linting.pylintArgs": ["--load-plugins", "pylint_flask"]
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_flask"
+  ],
+  "python.linting.pylintEnabled": true
 }
