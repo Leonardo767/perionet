@@ -1,7 +1,7 @@
 from flask import render_template, url_for, flash, redirect
-from perionet import app
-from perionet.chartHandle import Patient
-from perionet.forms import RegistrationForm, LoginForm
+from app import app
+from app.module.chart.chartHandle import Patient
+# from perionet.forms import RegistrationForm, LoginForm
 
 patient_name = 'John Doe'
 
