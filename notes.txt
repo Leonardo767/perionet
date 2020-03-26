@@ -1,0 +1,16 @@
+Process:
+1. Select patient by typing in last name
+2. Select patient by double clicking
+3. Click chart button
+4. select an existing restoration
+
+5. voice command structure: 
+[ATTRIBUTE] [Tooth #] [SELECT] *update tooth* [Tooth #]
+[ATTRIBUTE] [Tooth #] [SELECT] [Tooth #]
+
+6. "Perio" is keyword for beginning charting
+7. "Auto-advance on"
+8. "4 4 4" ... -> next tooth -> "4 3 4"
+9. Interuption: "Tooth 3" "bleeding" "facial" "mesial" ... adding several attributes
+10. "Resume" will return to where auto-advance left off
+11. Can flag teeth during auto-advance
